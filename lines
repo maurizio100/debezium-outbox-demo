@@ -1,0 +1,2 @@
+COPY ./connectors/debezium-connector-postgres-1.4.0.Final-plugin.tar.gz /usr/share/confluent-hub-components
+RUN cd /usr/share/confluent-hub-components && tar xzvf debezium-connector-postgres-1.4.0.Final-plugin.tar.gz && rm debezium-connector-postgres-1.4.0.Final-plugin.tar.gz

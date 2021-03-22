@@ -18,6 +18,9 @@
       "database.server.name": "sonic",
   
       "schema.include​.list": "public",
-      "table.include​.list": "public.outbox"
+      "table.include​.list": "public.outbox",
+      
+      "transforms": "unwrap",
+      "transforms.unwrap.type": "io.debezium.transforms.ExtractNewRecordState"
     }
   }

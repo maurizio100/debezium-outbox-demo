@@ -1,12 +1,11 @@
 {
     "name": "mdb-sink-outbox-raw",
     "config": {
-      "connector.class": "at.grahsl.kafka.connect.mongodb.MongoDbSinkConnector",
+      "connector.class": "com.mongodb.kafka.connect.MongoSinkConnector",
+      "tasks.max": "1",
       "topics": "sonic.public.outbox",
-      "mongodb.connection.uri": "mongodb://localhost:27017/sonic",
-      "mongodb.collections":"outbox-raw",
-      "mongodb.collection.sonic.public.outbox":"outbox-raw",
-      "mongodb.change.data.capture.handler.outbox-raw":"at.grahsl.kafka.connect.mongodb.cdc.debezium.rdbms.RdbmsHandler",
-      "mongodb.change.data.capture.handler.operations.outbox-raw":"c"
+      "connection.uri": "mongodb://mongodb:27017/sonic",
+      "database": "sonic",
+      "collection":"outbox-raw"
     }
   }

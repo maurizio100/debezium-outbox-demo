@@ -62,7 +62,7 @@ services:
       - zookeeper
         
   connect:
-    image: debezium/connect:1.4
+    build: .
     ports:
      - 8083:8083
     links:
